@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "clipboard.js": "^1.0.1",
+    "file-saver": "^2.0.5"
+  }
+}
