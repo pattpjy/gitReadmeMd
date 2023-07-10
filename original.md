@@ -76,14 +76,26 @@ Add live site link [Display Text](url)
 
 ## Architecture
 
-[Back to Top](#project-name)
+The Todo List app follows a client-server architecture, utilizing the following technologies:
 
+- **Frontend**: The frontend is built using HTML, CSS, and JavaScript. It leverages a modern JavaScript framework, such as React or Vue.js, for efficient rendering and handling user interactions.
+- **Backend**: The backend is developed using Node.js and Express.js. It provides RESTful APIs to handle task management operations, such as creating, reading, updating, and deleting tasks. The data is stored in a database, such as MongoDB, for persistence.
+- **Database**: The app utilizes a NoSQL database, like MongoDB, to store task data. The database ensures reliable and scalable storage of tasks and allows for efficient retrieval and modification of task information.
+- **Authentication**: User authentication and authorization are implemented using a secure authentication mechanism, such as JSON Web Tokens (JWT), to ensure that each user's tasks are private and only accessible to authorized individuals.
 <!-- ROADMAP -->
 
 ## Roadmap
 
-- [] Need update
-- [] Need update
+The following features and enhancements are planned for the future releases of the Todo List app:
+
+1. **User Registration and Authentication**: Enable users to register accounts, login, and manage their tasks securely.
+2. **Task Prioritization**: Implement the ability to assign priority levels to tasks for better organization and focus.
+3. **Task Categories and Tags**: Introduce the concept of categories and tags to allow users to group and label tasks based on their own preferences.
+4. **Task Reminders and Notifications**: Add functionality to set reminders for tasks and receive notifications to stay on top of deadlines.
+5. **Collaboration and Sharing**: Enable users to collaborate on tasks and share task lists with other users, facilitating team collaboration and task delegation.
+6. **Data Synchronization**: Implement data synchronization across multiple devices, ensuring that tasks are seamlessly accessible from various platforms.
+
+[Back to Top](#project-name)
 
 See the [open issue][issue-url] for a full list of proposed features (and known issues).
 

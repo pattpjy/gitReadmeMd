@@ -2,23 +2,104 @@
 <html>
   <head>
     <title>Markdown Generator</title>
-    <!-- Include necessary CSS stylesheets -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <form id="markdownForm">
-      <input type="text" id="yourname" placeholder="Enter your name" />
-      <input
+      <input type="text" id="yourName" placeholder="Enter your name" /><input
         type="text"
-        id="projectName"
+        id="gitHubUserName"
+        placeholder="Enter your gitHubUserName name"
+      />
+      <label for="projectNameInput">GitHub ProjectName:</label
+      ><input
+        type="text"
+        id="projectNameInput"
         placeholder="Enter your Project's name"
       />
+      <p>This also will be your repo name</p>
+      <label for="gitHubUserName">gitHub username:</label>
       <input
         type="text"
-        id="gitHubUser"
+        id="gitHubUserName"
         placeholder="Enter your gitHub username"
+      /><br />
+      <textarea id="projectDetail" rows="10" text></textarea><br />
+      <label for="liveSite">Live Demo Address:</label>
+      <input
+        type="text"
+        id="liveSite"
+        placeholder="http://this-is-live-site.vercel.com"
       />
-      <textarea id="projectDetail" rows="10" text></textarea>
+      <p>Installation Instruction:</p>
+      <label for="start">CML to Run the application</label><input type="text"
+      id="start" placeholder="npm run dev />
+      <label for="localhost">localhost:</label>
+      <input type="'text" id="localHost" placeholder="localhost:8080" />
+
+      <label>
+        <input type="checkbox" name="frontend" value="React" /> React </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="frontend" value="Vue.js" /> Vue.js </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="frontend" value="Angular" />
+        Angular </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="frontend" value="Ember.js" />
+        Ember.js </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="frontend" value="Svelte" /> Svelte </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="frontend" value="Other" /> Other </label
+      ><br />
+
+      <button onclick="getSelectedFrameworks('frontend')">
+        Add Frontend Tools
+      </button>
+
+      <h2>Choose your preferred backend language frameworks:</h2>
+
+      <label>
+        <input type="checkbox" name="backend" value="Node.js" /> Node.js </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="backend" value="Django" /> Django </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="backend" value="Ruby on Rails" /> Ruby on
+        Rails </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="backend" value="ASP.NET" /> ASP.NET </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="backend" value="Laravel" /> Laravel </label
+      ><br />
+
+      <label>
+        <input type="checkbox" name="backend" value="Other" /> Other </label
+      ><br />
+
+      <button onclick="getSelectedFrameworks('backend')">
+        Add Backend Tools
+      </button>
+      <label for="roadMap">Road Map:</label>
+      <textarea id="roadMap" rows="5" text></textarea>
+      <!-- Generate Markdown button -->
       <button type="button" onclick="generateMarkdown()">
         Generate Markdown
       </button>
