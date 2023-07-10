@@ -7,11 +7,18 @@
   </head>
   <body>
     <form id="markdownForm">
+      <input type="text" id="yourname" placeholder="Enter your name" />
       <input
         type="text"
-        id="fatherNameInput"
-        placeholder="Enter your father's name"
+        id="projectName"
+        placeholder="Enter your Project's name"
       />
+      <input
+        type="text"
+        id="gitHubUser"
+        placeholder="Enter your gitHub username"
+      />
+      <textarea id="projectDetail" rows="10" text></textarea>
       <button type="button" onclick="generateMarkdown()">
         Generate Markdown
       </button>

@@ -1,3 +1,5 @@
+const projectName = getElementById("ProjectNameInput");
+
 function generateMarkdown() {
   // Get the value entered in the input field
   var fatherName = document.getElementById("fatherNameInput").value;
