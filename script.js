@@ -97,7 +97,9 @@ function generateMarkdown() {
 `;
 
   // Set the markdown string as the output in the textarea
-  document.getElementById("markdownOutput").value = markdown;
+  var textarea = document.getElementById("markdownOutput");
+  textarea.classList.remove("hidden");
+  textarea.value = markdown;
 }
 
 // Prevent form submission on pressing Enter key
