@@ -28,7 +28,8 @@ const instructions = `1. Fork the Repo from the [Repository](https://github.com/
 
 function generateMarkdown() {
   // Create the markdown string
-  var markdown = `# ${projectName} ## Contributors: [![${yourName}][${yourName}-badge]][${yourName}-url]
+
+  var markdown = `# ${projectName.value} ## Contributors: [![${yourName.value}][${yourName.value}-badge]][${yourName.value}-url]
   
   ## Report Bug [Here][issue-url]
   
@@ -46,10 +47,9 @@ function generateMarkdown() {
   </details>
   
   ## About The Project
-  ${projDetail}
+  ${projDetail.value}
 
-  
-  Live site link [Display Text](${liveSite})
+  Live site link [Display Text](${liveSite.value})
   
   [Back to Top](#project-name)
   
@@ -77,7 +77,7 @@ function generateMarkdown() {
   
   The following features and enhancements are planned for the future releases of the Todo List app:
   
- ${roadMap}
+ ${roadMap.value}
   
   [Back to Top](#project-name)
   
@@ -91,14 +91,15 @@ function generateMarkdown() {
   
   [Back to Top](#project-name)
   
-  [${yourName}-badge]: https://img.shields.io/badge/-${yourName}-brightgreen
-  [${yourName}-url]: https://github.com/${gitHubName}
-  [issue-url]: https://github.com/${gitHubName}/${projectName}/issues
+  [${yourName.value}-badge]: https://img.shields.io/badge/-${yourName.value}-brightgreen
+  [${yourName.value}-url]: https://github.com/${gitHubName.value}
+  [issue-url]: https://github.com/${gitHubName.value}/${projectName.value}/issues
 `;
 
   // Set the markdown string as the output in the textarea
   document.getElementById("markdownOutput").value = markdown;
 }
+
 // Prevent form submission on pressing Enter key
 document
   .getElementById("markdownForm")

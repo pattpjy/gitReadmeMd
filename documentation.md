@@ -23,30 +23,11 @@ Here's how you can integrate Tailwind CSS into your project:
    npm install tailwindcss
    ```
 
-2. Create a Tailwind CSS configuration file: In your project's root directory, create a file named `tailwind.config.js` and paste the following code:
+2. Create a Tailwind CSS configuration file:
 
-   ```javascript
-   module.exports = {
-     purge: [],
-     darkMode: false,
-     theme: {
-       extend: {},
-     },
-     variants: {},
-     plugins: [],
-   };
-   ```
-
-3. Create a CSS file for your styles: Create a CSS file, e.g., `styles.css`, where you will include the Tailwind CSS styles along with any custom styles you want to add. In the CSS file, import Tailwind CSS using the `@import` directive:
-
-   ```css
-   @import "tailwindcss/base";
-   @import "tailwindcss/components";
-   @import "tailwindcss/utilities";
-
-   /* Add your custom styles below */
-   /* ... */
-   ```
+```shell
+npx tailwind init
+```
 
 4. Include the CSS file in your HTML: Link the CSS file in your HTML file by adding the following line in the `<head>` section:
 
