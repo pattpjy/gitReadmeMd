@@ -8,6 +8,7 @@ const projDetail = document.getElementById("projectDetail");
 const liveSite = document.getElementById("liveSite");
 const localHost = document.getElementById("localHost");
 const roadMap = document.getElementById("roadMap");
+const errorMessage = document.getElementById("errorMessage");
 const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName}/${projectName})
 2. Clone the repo
    \`\`\`sh
@@ -96,8 +97,26 @@ function generateMarkdown() {
   [issue-url]: https://github.com/${gitHubName.value}/${projectName.value}/issues
 `;
 
+  //check if any required fields have failed validation
+  const requiredFields = document.querySelectorAll("input[required]");
+  let hasInvalidRequiredField = false;
+  for (let i = 0; i < requiredFields.length; i++) {
+    if (!requiredFields[i].checkValidity()) {
+      hasInvalidRequiredField = true;
+      break;
+    }
+  }
+
+  // do not generate output if there's invalid field
+  if (hasInvalidRequiredField) {
+    errorMessage.classList.remove("hidden");
+    return;
+  }
+
   // Set the markdown string as the output in the textarea
-  var textarea = document.getElementById("markdownOutput");
+  const textarea = document.getElementById("markdownOutput");
+
+  errorMessage.classList.add("hidden");
   textarea.classList.remove("hidden");
   textarea.value = markdown;
 }
