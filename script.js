@@ -133,6 +133,8 @@ document
 function getSelectedFrameworks(type) {
   const frameworksArray = [];
   const checkboxes = document.getElementsByName(type);
+  const beMessage = document.getElementById("beFrameworkBtnMsg");
+  const feMessage = document.getElementById("feFrameworkBtnMsg");
 
   checkboxes.forEach(function (checkbox) {
     if (checkbox.checked) {
@@ -142,8 +144,10 @@ function getSelectedFrameworks(type) {
 
   if (type === "frontend") {
     selectedFrontEndFrameworks = frameworksArray;
+    feMessage.classList.remove("hidden");
   } else if (type === "backend") {
     selectedBackEndFrameworks = frameworksArray;
+    beMessage.classList.remove("hidden");
   }
   return frameworksArray;
 }

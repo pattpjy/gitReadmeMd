@@ -237,13 +237,15 @@
                   />
                   Other </label
                 ><br />
-
                 <button
                   class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                   onclick="getSelectedFrameworks('frontend')"
                 >
                   Add Frontend Tools
                 </button>
+                <p id="feFrameworkBtnMsg" class="hidden text-blue-500">
+                  Selected frameworks are added
+                </p>
               </div>
               <div class="sm:col-span-3">
                 <h2 class="block text-sm font-medium leading-6 text-gray-900">
@@ -316,6 +318,9 @@
                 >
                   Add Backend Tools
                 </button>
+                <p id="beFrameworkBtnMsg" class="hidden text-blue-500">
+                  Selected frameworks are added
+                </p>
               </div>
             </div>
           </div>
