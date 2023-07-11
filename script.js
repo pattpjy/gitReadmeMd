@@ -11,10 +11,10 @@ const roadMap = document.getElementById("roadMap");
 const errorMessage = document.getElementById("errorMessage");
 
 const projectNameHash = wordToHashtag(projectName.value);
-const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName}/${projectName})
+const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName.value}/${projectName.value})
 2. Clone the repo
    \`\`\`sh
-   git clone git@github.com:${gitHubName}/${gitHubName}.git
+   git clone git@github.com:${gitHubName.value}/${gitHubName.value}.git
    \`\`\`
 3. Install NPM packages
    \`\`\`sh
