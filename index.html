@@ -10,9 +10,12 @@
   </head>
   <body class="mt-3 text-sm leading-6 text-gray-600">
     <div class="col-span-2 row-start-2 min-w-0" id="repoForm">
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-900">
+        Readme Generator
+      </h1>
       <form
         id="markdownForm"
-        class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
+        class="mx-auto max-w-7xl px-4 py-32 sm:px-6 sm:py-16 lg:px-8"
       >
         <div class="border-b border-gray-900/10 pb-12">
           <h2 class="text-base font-semibold leading-7 text-gray-900">
@@ -173,6 +176,7 @@
                   />
                 </div>
               </div>
+
               <div class="sm:col-span-3">
                 <h2 class="block text-sm font-medium leading-6 text-gray-900">
                   Selected Frontend Architecture
@@ -180,13 +184,12 @@
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                    class
                     type="checkbox"
                     name="frontend"
                     value="React"
                   />
-                  React </label
-                ><br />
+                  React
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -195,8 +198,8 @@
                     name="frontend"
                     value="Vue.js"
                   />
-                  Vue.js </label
-                ><br />
+                  Vue.js
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -205,8 +208,8 @@
                     name="frontend"
                     value="Angular"
                   />
-                  Angular </label
-                ><br />
+                  Angular
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -215,8 +218,8 @@
                     name="frontend"
                     value="Ember.js"
                   />
-                  Ember.js </label
-                ><br />
+                  Ember.js
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -225,8 +228,8 @@
                     name="frontend"
                     value="Svelte"
                   />
-                  Svelte </label
-                ><br />
+                  Svelte
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -235,21 +238,22 @@
                     name="frontend"
                     value="Other"
                   />
-                  Other </label
-                ><br />
-
+                  Other
+                </label>
                 <button
                   class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                   onclick="getSelectedFrameworks('frontend')"
                 >
                   Add Frontend Tools
                 </button>
+                <p id="feFrameworkBtnMsg" class="hidden text-blue-500">
+                  Selected frameworks are added
+                </p>
               </div>
               <div class="sm:col-span-3">
                 <h2 class="block text-sm font-medium leading-6 text-gray-900">
                   Selected Backend Architecture
                 </h2>
-
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
@@ -257,8 +261,8 @@
                     name="backend"
                     value="Node.js"
                   />
-                  Node.js </label
-                ><br />
+                  Node.js
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -267,8 +271,8 @@
                     name="backend"
                     value="Django"
                   />
-                  Django </label
-                ><br />
+                  Django
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -277,8 +281,8 @@
                     name="backend"
                     value="Ruby on Rails"
                   />
-                  Ruby on Rails </label
-                ><br />
+                  Ruby on Rails
+                </label>
 
                 <label>
                   <input
@@ -287,9 +291,8 @@
                     name="backend"
                     value="ASP.NET"
                   />
-                  ASP.NET </label
-                ><br />
-
+                  ASP.NET
+                </label>
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
                     class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
@@ -297,8 +300,8 @@
                     name="backend"
                     value="Laravel"
                   />
-                  Laravel </label
-                ><br />
+                  Laravel
+                </label>
 
                 <label class="text-sm font-medium leading-6 text-gray-900">
                   <input
@@ -307,8 +310,8 @@
                     name="backend"
                     value="Other"
                   />
-                  Other </label
-                ><br />
+                  Other
+                </label>
 
                 <button
                   class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
@@ -316,6 +319,9 @@
                 >
                   Add Backend Tools
                 </button>
+                <p id="beFrameworkBtnMsg" class="hidden text-blue-500">
+                  Selected frameworks are added
+                </p>
               </div>
             </div>
           </div>

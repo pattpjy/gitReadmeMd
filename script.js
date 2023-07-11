@@ -9,10 +9,12 @@ const liveSite = document.getElementById("liveSite");
 const localHost = document.getElementById("localHost");
 const roadMap = document.getElementById("roadMap");
 const errorMessage = document.getElementById("errorMessage");
-const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName}/${projectName})
+
+const projectNameHash = wordToHashtag(projectName.value);
+const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName.value}/${projectName.value})
 2. Clone the repo
    \`\`\`sh
-   git clone git@github.com:${gitHubName}/${gitHubName}.git
+   git clone git@github.com:${gitHubName.value}/${gitHubName.value}.git
    \`\`\`
 3. Install NPM packages
    \`\`\`sh
@@ -72,7 +74,7 @@ function generateMarkdown() {
   The Todo List app follows a client-server architecture, utilizing the following technologies:
   
   - **Frontend**: ${selectedFrontEndFrameworks}
-  - **Backend**: ${selectedFrontEndFrameworks}
+  - **Backend**: ${selectedBackEndFrameworks}
   
   ## Roadmap
   
@@ -129,16 +131,10 @@ document
   });
 
 function getSelectedFrameworks(type) {
-  // Get all selected frameworks
-
-  const frameworksArray = null;
-  if (type === "frontend") {
-    frameworksArrays = selectedFrontEndFrameworks;
-  } else if (type === "backend") {
-    frameworksArray = selectedBackEndFrameworks;
-  }
-
-  var checkboxes = document.getElementsByName(type);
+  const frameworksArray = [];
+  const checkboxes = document.getElementsByName(type);
+  const beMessage = document.getElementById("beFrameworkBtnMsg");
+  const feMessage = document.getElementById("feFrameworkBtnMsg");
 
   checkboxes.forEach(function (checkbox) {
     if (checkbox.checked) {
@@ -146,6 +142,21 @@ function getSelectedFrameworks(type) {
     }
   });
 
-  // Output the selected frameworks
-  console.log(frameworksArray);
+  if (type === "frontend") {
+    selectedFrontEndFrameworks = frameworksArray;
+    feMessage.classList.remove("hidden");
+  } else if (type === "backend") {
+    selectedBackEndFrameworks = frameworksArray;
+    beMessage.classList.remove("hidden");
+  }
+  return frameworksArray;
 }
+// Output the selected frameworks
+console.log(selectedFrontEndFrameworks, selectedBackEndFrameworks);
+
+// parse word into hashtag
+function wordToHashtag(word) {
+  return `#${word.toLowerCase().replaceAll(" ", "-")}`;
+}
+const testWord = "My Ready Project";
+console.log(wordToHashtag(testWord));
