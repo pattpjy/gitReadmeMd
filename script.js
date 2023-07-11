@@ -74,7 +74,7 @@ function generateMarkdown() {
   The Todo List app follows a client-server architecture, utilizing the following technologies:
   
   - **Frontend**: ${selectedFrontEndFrameworks}
-  - **Backend**: ${selectedFrontEndFrameworks}
+  - **Backend**: ${selectedBackEndFrameworks}
   
   ## Roadmap
   
@@ -131,16 +131,8 @@ document
   });
 
 function getSelectedFrameworks(type) {
-  // Get all selected frameworks
-
-  const frameworksArray = null;
-  if (type === "frontend") {
-    frameworksArrays = selectedFrontEndFrameworks;
-  } else if (type === "backend") {
-    frameworksArray = selectedBackEndFrameworks;
-  }
-
-  var checkboxes = document.getElementsByName(type);
+  const frameworksArray = [];
+  const checkboxes = document.getElementsByName(type);
 
   checkboxes.forEach(function (checkbox) {
     if (checkbox.checked) {
@@ -148,9 +140,15 @@ function getSelectedFrameworks(type) {
     }
   });
 
-  // Output the selected frameworks
-  console.log(frameworksArray);
+  if (type === "frontend") {
+    selectedFrontEndFrameworks = frameworksArray;
+  } else if (type === "backend") {
+    selectedBackEndFrameworks = frameworksArray;
+  }
+  return frameworksArray;
 }
+// Output the selected frameworks
+console.log(selectedFrontEndFrameworks, selectedBackEndFrameworks);
 
 // parse word into hashtag
 function wordToHashtag(word) {
