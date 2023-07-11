@@ -9,6 +9,8 @@ const liveSite = document.getElementById("liveSite");
 const localHost = document.getElementById("localHost");
 const roadMap = document.getElementById("roadMap");
 const errorMessage = document.getElementById("errorMessage");
+
+const projectNameHash = wordToHashtag(projectName.value);
 const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName}/${projectName})
 2. Clone the repo
    \`\`\`sh
@@ -149,3 +151,10 @@ function getSelectedFrameworks(type) {
   // Output the selected frameworks
   console.log(frameworksArray);
 }
+
+// parse word into hashtag
+function wordToHashtag(word) {
+  return `#${word.toLowerCase().replaceAll(" ", "-")}`;
+}
+const testWord = "My Ready Project";
+console.log(wordToHashtag(testWord));
