@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Markdown Generator</title>
+    <title>Readme Generator</title>
     <link rel="stylesheet" href="./output.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
   </head>
   <body class="mt-3 text-sm leading-6 text-gray-600">
     <div class="col-span-2 row-start-2 min-w-0" id="repoForm">
@@ -359,13 +360,37 @@
       >
         Please fill in all required fields.
       </h2>
-      <textarea
-        class="hidden block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        id="markdownOutput"
-        rows="30"
-        readonly
-      ></textarea>
+      <div id="copyOutputBox" class="hidden">
+        <button
+          id="copyOutput"
+          class="copyOutput rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          data-clipboard-target="#markdownOutput"
+        >
+          Copy Markdown
+        </button>
+        <p>Copy and paste this markdown to you readme file in GitHub repo</p>
+        <textarea
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          id="markdownOutput"
+          rows="30"
+          readonly
+        ></textarea>
+      </div>
     </div>
+    <a href="https://www.buymeacoffee.com/pattsookmark">
+      <img
+        align="left"
+        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        height="50"
+        width="210"
+        alt="pattsookmark"
+    /></a>
+    <a class="linkedin" href="https://www.linkedin.com/in/pattsookmark/">
+      <i
+        class="fa-brands fa-linkedin-in fa-beat-fade fa-2xl py-6 px-6"
+        style="--fa-animation-duration: 2s"
+      ></i
+    ></a>
   </body>
   <script src="script.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -382,4 +407,8 @@
 
     gtag("config", "G-BVZLF95E79");
   </script>
+  <script
+    src="https://kit.fontawesome.com/103e31ca68.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
