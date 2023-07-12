@@ -1,6 +1,6 @@
 # gitReadmeMd
 
-Make Me Ready is a web application allowing you to generate README.md files for your GitHub repositories easily. With this tool, you can quickly create professional-looking READMEs by providing your repository information in a simple form.
+gitReadmeMd is a web application allowing you to easily generate README.md files for your GitHub repositories. With this tool, you can quickly create professional-looking READMEs by providing your repository information in a simple form.
 
 ## Live Demo
 
@@ -28,7 +28,7 @@ You can try out the live version of gitRead-MeMD at [gitReadmeMD](https://pattpj
 4. Review the generated README.md file in the preview section to ensure it meets your requirements.
 5. If satisfied, click the "Download" button to save the README.md file to your local machine.
 6. Copy the content of the generated README.md file and paste it into the README.md of your GitHub repository.
-7. Customize the generated README.md file by adding sections, formatting, or images if needed.
+7. Customize the generated README.md file by adding sections, formatting, or images.
 
 ## Contributing
 
