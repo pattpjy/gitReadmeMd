@@ -116,11 +116,21 @@ function generateMarkdown() {
     errorMessage.classList.remove("hidden");
     return;
   }
+  //---add loader---
+  const loader = document.getElementById("loader");
+  loader.style.display = "block";
 
-  // Set the markdown string as the output in the textarea
-  copyOutputBox.classList.remove("hidden");
-  errorMessage.classList.add("hidden");
-  textarea.value = markdown;
+  // Set a timeout to simulate the markdown generation process
+  setTimeout(() => {
+    const textarea = document.getElementById("markdownOutput");
+    copyOutputBox.classList.remove("hidden");
+    errorMessage.classList.add("hidden");
+    textarea.classList.remove("hidden");
+    textarea.value = markdown;
+
+    // Hide the loader spinner
+    loader.style.display = "none";
+  }, 2000); // Adjust the timeout value as needed
 }
 
 // Prevent form submission on pressing Enter key
