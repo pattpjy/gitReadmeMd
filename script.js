@@ -123,6 +123,7 @@ function generateMarkdown() {
   // Set a timeout to simulate the markdown generation process
   setTimeout(() => {
     const textarea = document.getElementById("markdownOutput");
+    loader.style.display = "none";
     copyOutputBox.classList.remove("hidden");
     errorMessage.classList.add("hidden");
     textarea.classList.remove("hidden");
