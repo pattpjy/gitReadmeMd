@@ -9,8 +9,11 @@ const liveSite = document.getElementById("liveSite");
 const localHost = document.getElementById("localHost");
 const roadMap = document.getElementById("roadMap");
 const errorMessage = document.getElementById("errorMessage");
+const textarea = document.getElementById("markdownOutput");
+const copyOutputBox = document.getElementById("copyOutputBox");
 
 const projectNameHash = wordToHashtag(projectName.value);
+
 const instructions = `1. Fork the Repo from the [Repository](https://github.com/${gitHubName.value}/${projectName.value})
 2. Clone the repo
    \`\`\`sh
@@ -29,9 +32,8 @@ const instructions = `1. Fork the Repo from the [Repository](https://github.com/
    ${localHost}
    \`\`\``;
 
+// ---------- Create the markdown string ----------
 function generateMarkdown() {
-  // Create the markdown string
-
   var markdown = `# ${projectName.value} ## Contributors: [![${yourName.value}][${yourName.value}-badge]][${yourName.value}-url]
   
   ## Report Bug [Here][issue-url]
@@ -116,10 +118,8 @@ function generateMarkdown() {
   }
 
   // Set the markdown string as the output in the textarea
-  const textarea = document.getElementById("markdownOutput");
-
+  copyOutputBox.classList.remove("hidden");
   errorMessage.classList.add("hidden");
-  textarea.classList.remove("hidden");
   textarea.value = markdown;
 }
 
@@ -151,8 +151,6 @@ function getSelectedFrameworks(type) {
   }
   return frameworksArray;
 }
-// Output the selected frameworks
-console.log(selectedFrontEndFrameworks, selectedBackEndFrameworks);
 
 // parse word into hashtag
 function wordToHashtag(word) {
@@ -160,7 +158,7 @@ function wordToHashtag(word) {
 }
 
 // copy text to clipboard
-var clipboard = new ClipboardJS(".btn");
+var clipboard = new ClipboardJS(".copyOutput");
 
 clipboard.on("success", function (e) {
   console.info("Action:", e.action);
