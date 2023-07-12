@@ -4,7 +4,7 @@ Make Me Ready is a web application allowing you to generate README.md files for 
 
 ## Live Demo
 
-You can try out the live version of gitRead-MeMD at [gitReadmeMD.vercel.com](https://gitReadmeMD.vercel.com).
+You can try out the live version of gitRead-MeMD at [gitReadmeMD](https://pattpjy.github.io/gitReadmeMd/).
 
 ## Features
 
@@ -16,23 +16,23 @@ You can try out the live version of gitRead-MeMD at [gitReadmeMD.vercel.com](htt
 
 ## Technologies Used
 
-- HTML5, CSS3 for the frontend interface.
+- HTML5, Tailwind CSS for the frontend interface.
 - JavaScript for form handling and markdown generation.
-- [Vercel](https://vercel.com) for deploying and hosting the application.
+- GitHub Page for deploying and hosting the application.
 
 ## How to Use
 
-1. Open the Make Me Ready web application by visiting [gitReadmeMD.vercel.com](https://gitReadmeMD.vercel.com).
+1. Open the Make Me Ready web application by visiting [gitReadmeMD](https://pattpjy.github.io/gitReadmeMd/).
 2. Fill out the form with the required information about your GitHub repository, such as the repository name, description, installation instructions, usage guide, etc.
 3. Create a Markdown file by clicking the "Generate README" button.
 4. Review the generated README.md file in the preview section to ensure it meets your requirements.
 5. If satisfied, click the "Download" button to save the README.md file to your local machine.
 6. Copy the content of the generated README.md file and paste it into the README.md of your GitHub repository.
-7. If needed, Customize the generated README.md file by adding additional sections, formatting, or images.
+7. Customize the generated README.md file by adding sections, formatting, or images if needed.
 
 ## Contributing
 
-If you have any suggestions, improvements, or bug reports, please open an issue or submit a pull request on the [GitHub repository](https://github.com/pattpjy/make-me-ready). Contributions are highly appreciated!
+If you have suggestions, improvements, or bug reports, please open an issue or submit a pull request on the [GitHub repository](https://github.com/pattpjy/gitReadmeMd/issues). Contributions are highly appreciated!
 
 ## License
 
@@ -43,3 +43,4 @@ This project is licensed under the [MIT License](LICENSE).
 We hope you find Make Me Ready helpful in creating comprehensive and well-structured README.md files for your GitHub repositories. Please don't hesitate to reach out if you encounter any issues or have any feedback.
 
 Happy coding!
+
